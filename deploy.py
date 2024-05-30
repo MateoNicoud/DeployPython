@@ -46,7 +46,7 @@ def deployOnAnyWhere():
     # Authentication information
     username = 'mateonicoud'
     api_token = '2f6ff3932dcda525e89bc8378471efb572b5147b'
-    id = 34020282
+    id = 34039582
     # PythonAnywhere API endpoints
     git_pull_url = f"https://www.pythonanywhere.com/api/v0/user/{username}/consoles/{id}/send_input/"
     reload_app_url = f"https://www.pythonanywhere.com/api/v0/user/{username}/webapps/mateonicoud.pythonanywhere.com/reload/"
@@ -73,9 +73,9 @@ def deployOnGit():
     commit_message = f"Automatic deployment - {timestamp}"
 
     # Git commands to add, commit, and push changes
-    subprocess.run(["git", "add", "."])
-    subprocess.run(["git", "commit", "-m", f"{commit_message}"])
-    subprocess.run(["git", "push", "origin", "main"])
+    subprocess.run(["git", "add", "."], cwd=projet_path)
+    subprocess.run(["git", "commit", "-m", f"{commit_message}"], cwd=projet_path)
+    subprocess.run(["git", "push", "origin", "main"], cwd=projet_path)
 
 
 if __name__ == "__main__":
