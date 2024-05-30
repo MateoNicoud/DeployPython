@@ -73,9 +73,9 @@ def deployOnGit():
     commit_message = f"Automatic deployment - {timestamp}"
 
     # Git commands to add, commit, and push changes
-    subprocess.run(["git", "add", "."], cwd=projet_path)
-    subprocess.run(["git", "commit", "-m", f"{commit_message}"], cwd=projet_path)
-    subprocess.run(["git", "push", "origin", "main"], cwd=projet_path)
+    subprocess.run(["git", "add", "."])
+    subprocess.run(["git", "commit", "-m", f"{commit_message}"])
+    subprocess.run(["git", "push", "origin", "main"])
 
 
 if __name__ == "__main__":
