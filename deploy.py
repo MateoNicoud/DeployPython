@@ -75,7 +75,7 @@ def deployOnGit():
     # Git commands to add, commit, and push changes
     subprocess.run(["git", "add", "."], cwd=projet_path)
     subprocess.run(["git", "commit", "-m", f"{commit_message}"], cwd=projet_path)
-    subprocess.run(["git", "push"], cwd=projet_path)
+    subprocess.run(["git", "push", "origin", "main"], cwd=projet_path)
 
 
 if __name__ == "__main__":
